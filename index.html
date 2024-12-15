@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>My Card</title>
+        <title>My Webpage</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style1.css">
+        <link id="pageStyle" rel="stylesheet" href="style1.css">
     </head>
     <body>
         
@@ -15,18 +15,16 @@
                <a href=""><ion-icon class="home" name="home-outline"></ion-icon><p>Home</p></a> 
             </div>
 
-            <div class="aboutMe">
-                <a href="" target="_blank"><p>About Me</p></a>
-            </div>
+            <div id="timer" class="timer" onload="timer()">s</div>
 
             <button class="lightDark" id="lightDark">
-                <ion-icon name="contrast-outline"></ion-icon>
+                <ion-icon class="switch" name="contrast-outline"></ion-icon>
             </button>
         </nav>
 
         <section class="mainContent"></section>
         
-        <script src="" async defer></script>
+        <script src="main.js" async defer></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
