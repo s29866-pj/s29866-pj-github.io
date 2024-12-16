@@ -5,7 +5,10 @@ body {
     background-color: #F0F4EF;
     color: #272d2d;
     display: block;
+    box-sizing: border-box;
     font-family: "Ubuntu", serif;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -31,14 +34,15 @@ nav a {
     overflow: hidden;
     box-sizing: border-box;
     padding: 0 10px;
-    transition: ease-out 300ms;
+    transition: ease-out 200ms;
+    margin-right: 10px;
 }
 
 .mainMenu:hover {
     cursor: pointer;
     box-shadow: #272d2d 1px 2px 5px;
     z-index: 10;
-    transition: ease-out 300ms;
+    transition: ease-out 200ms;
 }
 
 .mainMenu a{
@@ -56,7 +60,7 @@ nav a {
     background-color: #272d2d;
     z-index: 0;
     left: -100%;
-    transition: linear 300ms;
+    transition: linear 200ms;
 }
 
 .mainMenu:hover::before {
@@ -88,7 +92,8 @@ nav a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: ease-out 300ms;
+    transition: ease-out 200ms;
+    margin-right: auto;
 }
 
 .lightDark::before {
@@ -99,7 +104,7 @@ nav a {
     background-color: #272d2d;
     z-index: 0;
     left: -100%;
-    transition: linear 300ms;
+    transition: linear 200ms;
 }
 
 .lightDark:hover::before {
@@ -110,7 +115,7 @@ nav a {
     cursor: pointer;
     box-shadow: #272d2d 1px 2px 5px;
     z-index: 10;
-    transition: ease-out 300ms;
+    transition: ease-out 200ms;
 }
 
 .lightDark .switch {
@@ -126,9 +131,196 @@ nav a {
 
 
 /* Main Content */
-main {
+.mainContent {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px;
 }
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #272d2d; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #272d2d; }
+  }
+
+
+
+
+
+
+  /* Responsive design */
+  @media  (max-width: 768px) {
+
+    /* Navigation Bar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+    }
+
+    nav a {
+        color: #272d2d;
+        text-decoration: none;
+    }
+
+    .mainMenu {
+        display: flex;
+        position: relative;
+        gap: 10px;
+        border: solid 1px #272d2d;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 10px 10px;
+        transition: ease-out 200ms;
+        margin-right: 10px;
+    }
+
+    .mainMenu:hover {
+        cursor: pointer;
+        box-shadow: #272d2d 1px 2px 5px;
+        z-index: 10;
+        transition: ease-out 200ms;
+    }
+
+    .mainMenu a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mainMenu p {
+        display: none;
+    }
+
+    .mainMenu::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #272d2d;
+        z-index: 0;
+        left: -100%;
+        top: 0;
+        transition: linear 200ms;
+    }
+
+    .mainMenu:hover::before {
+        left: 0;
+    }
+
+    .mainMenu:hover a {
+        color: #F0F4EF;
+        z-index: 1;
+    }
+
+    .timer{
+        color: #272d2d;
+        font-size: 0.7rem;
+        text-shadow: 0px 1px 1px #272d2d;
+        position: relative;
+        transition: transform .4s ease;
+    }
+
+    .lightDark {
+        position: relative;
+        background-color: #F0F4EF;
+        display: flex;
+        gap: 20px;
+        border: solid 1px #272d2d;
+        border-radius: 1rem;
+        width: 50px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: ease-out 200ms;
+        margin-right: auto;
+    }
+
+    .lightDark::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #272d2d;
+        z-index: 0;
+        left: -100%;
+        transition: linear 200ms;
+    }
+
+    .lightDark:hover::before {
+        left: 0;
+    }
+
+    .lightDark:hover {
+        cursor: pointer;
+        box-shadow: #272d2d 1px 2px 5px;
+        z-index: 10;
+        transition: ease-out 200ms;
+    }
+
+    .lightDark .switch {
+        width: 20px;
+        height: 20px;
+        color: #272d2d;
+    }
+
+    .lightDark:hover .switch {
+        color: #F0F4EF;
+    }
+
+
+    .mainContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 20px;
+    }
+
+    
+    .typewriter h1 {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid #272d2d; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        font-size: 14px;
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #272d2d; }
+      }
+    
+  }
