@@ -1,3 +1,4 @@
+//timer
 function timer(){
     var date = new Date();
     
@@ -17,6 +18,8 @@ function timer(){
     setInterval(timer, 1000)
     
 
+
+    //light dark switch    
     function swapStyleSheet(sheet) {
         document.getElementById("pageStyle").setAttribute("href", sheet);  
     }
@@ -34,8 +37,24 @@ function timer(){
             }
         };
     }
-    
     window.onload = initate;
+
+
+    // showing and hiding menu
+
+    function showMenu() {
+        let menuStyle = document.getElementById("huge");
+        let bodyStyle = document.body;
+
+        if (menuStyle.style.display == "none") {
+            menuStyle.style.display = "flex";
+            bodyStyle.style.overflow = "hidden";
+        } else {
+            menuStyle.style.display = "none";
+            bodyStyle.style.overflow = "auto";
+        }      
+    }
+
     
     
     

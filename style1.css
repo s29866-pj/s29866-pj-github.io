@@ -10,6 +10,49 @@ body {
     font-family: "Ubuntu", serif;
 }
 
+.huge {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #F0F4EF;
+    cursor: pointer;
+    background: #272d2d;
+    border: none;
+}
+
+.X {
+    font-size: 2rem;
+    color: #F0F4EF;
+    cursor: pointer;
+}
+
+.huge li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    color: #F0F4EF;
+}
+
+.huge li a {
+    color: #F0F4EF;
+    text-decoration: none;
+}
+
+.huge li a:hover {
+    opacity: 0.6;
+}
 
 /* Navigation Bar */
 nav {
@@ -19,7 +62,7 @@ nav {
     align-items: center;
 }
 
-nav a {
+nav .menu {
     color: #F0F4EF;
     text-decoration: none;
 }
@@ -44,7 +87,7 @@ nav a {
     transition: ease-out 200ms;
 }
 
-.mainMenu a{
+.mainMenu .menu{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,7 +109,7 @@ nav a {
     left: 0;
 }
 
-.mainMenu:hover a {
+.mainMenu:hover .menu {
     color: #272d2d;
     z-index: 1;
 }
@@ -168,10 +211,8 @@ nav a {
     text-align: center;
     margin: 50px 10px;
     padding: 20px;
-    border-radius: 1rem;
     background-color: #F0F4EF;
     color: #272d2d;
-    box-shadow: 0px 2px 5px #F0F4EF;
     line-height: 30px;
     box-sizing: border-box;
   }
@@ -192,6 +233,18 @@ nav a {
   /* Responsive design */
   @media  (max-width: 768px) {
 
+    .huge {
+        line-height: 25px;
+    }
+
+    .huge li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        color: #F0F4EF;
+    }
+
     /* Navigation Bar */
     nav {
         display: flex;
@@ -200,7 +253,7 @@ nav a {
         align-items: center;
     }
 
-    nav a {
+    nav .menu {
         color: #F0F4EF;
         text-decoration: none;
     }
@@ -225,7 +278,7 @@ nav a {
         transition: ease-out 200ms;
     }
 
-    .mainMenu a{
+    .mainMenu .menu{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -256,6 +309,7 @@ nav a {
         color: #F0F4EF;
         z-index: 1;
     }
+
 
     .timer{
         color: #F0F4EF;
@@ -344,6 +398,18 @@ nav a {
       @keyframes blink-caret {
         from, to { border-color: transparent }
         50% { border-color: #F0F4EF; }
+      }
+
+
+      .whatsHere {
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 30px 5px;
+        padding: 10px;
+        background-color: #F0F4EF;
+        color: #272d2d;
+        line-height: 15px;
+        box-sizing: border-box;
       }
     
   }

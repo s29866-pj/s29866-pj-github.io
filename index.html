@@ -9,17 +9,25 @@
         <link id="pageStyle" rel="stylesheet" href="style1.css">
     </head>
     <body>
+
+        <div class="huge" id="huge">
+            <button class="close" id="close" type="button" onclick="showMenu()"><ion-icon class="X" name="close-outline"></ion-icon></button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
         
         <nav class="nav_container">
-            <div class="mainMenu">
-               <a href=""><ion-icon class="home" name="home-outline"></ion-icon><p>Home</p></a> 
+            <div class="mainMenu" id="menu" onclick="showMenu()">
+               <div class="menu"><ion-icon class="home" name="menu-outline"></ion-icon><p>Menu</p></div> 
             </div>
-
 
             <button class="lightDark" id="lightDark">
                 <ion-icon class="switch" name="contrast-outline"></ion-icon>
             </button>
-
 
             <div id="timer" class="timer" onload="timer()"></div>
         </nav>
