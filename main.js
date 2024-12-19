@@ -1,60 +1,56 @@
-//timer
-function timer(){
-    var date = new Date();
+// Timer using requestAnimationFrame
+function updateTimer() {
+    const date = new Date();
+    const time = date.toLocaleTimeString('en-US', {
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
     
-    let hour = date.getHours();
-    let minute = date.getMinutes();
-    let second = date.getSeconds();
-    
-    minute = (minute<10)? '0'+minute : minute;
-    hour = (hour<10)? '0'+hour : hour;
-    second = (second<10)? '0'+second : second;
-    
-    let time = hour +' : '+ minute + ' : ' + second;
-    
-    document.getElementById('timer').innerHTML = time;
-    }
-    
-    setInterval(timer, 1000)
-    
+    document.getElementById('timer').textContent = time;
+    requestAnimationFrame(updateTimer);
+}
 
+requestAnimationFrame(updateTimer);
 
-    //light dark switch    
-    function swapStyleSheet(sheet) {
-        document.getElementById("pageStyle").setAttribute("href", sheet);  
-    }
+// Theme switching with localStorage
+const themeToggle = document.getElementById('lightDark');
+const currentTheme = localStorage.getItem('theme') || 'dark';
+document.getElementById('pageStyle').href = `style${currentTheme === 'dark' ? '1' : '2'}.css`;
+
+themeToggle.addEventListener('click', () => {
+    const currentStyle = document.getElementById('pageStyle').getAttribute('href');
+    const newTheme = currentStyle === 'style1.css' ? 'light' : 'dark';
     
-    function initate() {
-        let style1 = document.getElementById("lightDark");
+    document.getElementById('pageStyle').href = `style${newTheme === 'dark' ? '1' : '2'}.css`;
+    localStorage.setItem('theme', newTheme);
+});
+
+// Improved menu handling
+const menu = document.getElementById('menu');
+const menuDialog = document.getElementById('huge');
+const closeButton = document.getElementById('close');
+
+function toggleMenu(show) {
+    requestAnimationFrame(() => {
+        menuDialog.style.display = show ? 'flex' : 'none';
+        document.body.style.overflow = show ? 'hidden' : 'auto';
         
-        style1.onclick = function () {
-            let pageStyle = document.getElementById("pageStyle").getAttribute("href");
-            
-            if (pageStyle === "style2.css") {
-                swapStyleSheet("style1.css");
-            } else {
-                swapStyleSheet("style2.css");
-            }
-        };
-    }
-    window.onload = initate;
-
-
-    // showing and hiding menu
-
-    function showMenu() {
-        let menuStyle = document.getElementById("huge");
-        let bodyStyle = document.body;
-
-        if (menuStyle.style.display == "none") {
-            menuStyle.style.display = "flex";
-            bodyStyle.style.overflow = "hidden";
+        if (show) {
+            closeButton.focus();
         } else {
-            menuStyle.style.display = "none";
-            bodyStyle.style.overflow = "auto";
-        }      
-    }
+            menu.focus();
+        }
+    });
+}
 
-    
-    
-    
+menu.addEventListener('click', () => toggleMenu(true));
+closeButton.addEventListener('click', () => toggleMenu(false));
+
+// Close menu on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuDialog.style.display === 'flex') {
+        toggleMenu(false);
+    }
+});

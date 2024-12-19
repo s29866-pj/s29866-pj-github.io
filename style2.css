@@ -53,6 +53,7 @@ body {
 
 .huge li a:hover {
     opacity: 0.6;
+    text-decoration: underline;
 }
 
 
@@ -233,6 +234,20 @@ nav .menu {
   /* Responsive design */
   @media  (max-width: 768px) {
 
+
+    .huge {
+        line-height: 25px;
+    }
+
+    .huge li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        color: #F0F4EF;
+    }
+
+
     /* Navigation Bar */
     nav {
         display: flex;
@@ -273,7 +288,7 @@ nav .menu {
         gap: 10px;
     }
 
-    .mainMenu .menu {
+    .mainMenu p {
         display: none;
     }
 
@@ -293,7 +308,7 @@ nav .menu {
         left: 0;
     }
 
-    .mainMenu:hover .menu {
+    .mainMenu:hover a {
         color: #F0F4EF;
         z-index: 1;
     }
@@ -386,5 +401,18 @@ nav .menu {
         from, to { border-color: transparent }
         50% { border-color: #272d2d; }
       }
+
+      .whatsHere {
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 30px 5px;
+        padding: 10px;
+        background-color: #272d2d;
+        color: #F0F4EF;
+        line-height: 15px;
+        box-sizing: border-box;
+      }
     
   }
+
+  
