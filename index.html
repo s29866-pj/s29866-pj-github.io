@@ -13,9 +13,8 @@
         <div class="huge" id="huge">
             <button class="close" id="close" type="button" onclick="showMenu()"><ion-icon class="X" name="close-outline"></ion-icon></button>
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#aboutMe">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -38,7 +37,7 @@
             </div>
         </section>
 
-        <section class="whatsHere">
+        <section class="whatsHere" id="features">
             <h2>Whats on this page?</h2>
             <ul>
                 <li>Navigation bar with light/dark mode switch, timer, and home icon</li>
@@ -50,8 +49,63 @@
                 <li>The navigation bar and main content sections are both accessible via keyboard navigation</li>
             </ul>
         </section>
+
+        <section class="aboutMe" id="aboutMe">
+            <div class="myResponsibilities">
+                <h2>About me</h2>
+                <p>I am a systems engineer on the first and second line of support. On a daily basis at work I deal with:</p>
+                <ul>
+                    <li>Troubleshooting hardware and software issues on both Windows and Mac enviroments</li>
+                    <li>Setting up and maintaining RHEL virtual machines</li>
+                    <li>Managing and optimizing Redhat infrastructure</li>
+                    <li>Preparing new computers for employees</li>
+                    <li>Writing automatization scripts in Powershell, Ansible</li>
+                    <li>Solving complex technical problems</li>
+                    <li>Providing support for remote work</li>
+                </ul>
+                <p>I'm always eager to learn and explore new technologies, especially if it comes to managing and provisioning systems.</p>
+
+                <ion-icon name="laptop"></ion-icon>
+                <ion-icon name="logo-tux"></ion-icon>
+                <ion-icon name="construct"></ion-icon>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="sectionOne"><h2>Contact me:</h2></div>
+            <div class="sectionTwo">
+                <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                <input class="send" type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>© Aleksander Kozlowicz 2025 My Webpage. All rights reserved.</p>
+            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-pinterest"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </footer>
+
+        <button class="scrollUp" id="scrollUp" onclick="topFunction()">
+            <ion-icon class="arrow-up" name="arrow-up-outline"></ion-icon>
+        </button>
         
-        <script src="main.js" async defer></script>
+        <script src="lightDark.js"></script>
+        <script src="menuHandling.js"></script>
+        <script src="scrollUp.js"></script>
+        <script src="timer.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>

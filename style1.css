@@ -1,3 +1,4 @@
+/* Dark theme */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body {
@@ -210,7 +211,6 @@ nav .menu {
   .whatsHere {
     font-size: 1rem;
     text-align: center;
-    margin: 50px 10px;
     padding: 20px;
     background-color: #F0F4EF;
     color: #272d2d;
@@ -405,16 +405,272 @@ nav .menu {
       .whatsHere {
         font-size: 0.8rem;
         text-align: center;
-        margin: 30px 5px;
         padding: 10px;
         background-color: #F0F4EF;
         color: #272d2d;
         line-height: 15px;
         box-sizing: border-box;
       }
+
+      .aboutMe {
+        font-size: 10px;
+        position: relative;
+        text-align: center;
+        margin-top: 40px;
+        box-sizing: border-box; 
+        color: #3fc1b8;
+        background-image: conic-gradient(from 45deg, #3fc1b8 19%, #8eb5cf 19%, #e88fdc 56%); 
+        background-clip: text; 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+    }
+    
+    .aboutMe ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        line-height: 20px;
+    }
+    
+    .aboutMe ion-icon {
+        font-size: 1rem;
+        margin-right: 10px;
+        padding: 5px;
+    }
+    
+    /* Scroll to top button */
+    
+    .scrollUp {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        font-size: 1px;
+        padding: 5px 15px 0px 15px;
+        color: #272d2d;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        border-radius: 1px;
+        background-color: #F0F4EF;
+        outline: none;
+        z-index: 1000;
+    }
+    
+    .scrollUp::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        left: -20%;
+        top: -20%;
+        border-top: #F0F4EF 2px solid;
+        border-left: #F0F4EF 2px solid;
+        transition: linear 300ms;
+    }
+    
+    .scrollUp::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        right: -20%;
+        bottom: -20%;
+        border-bottom: #F0F4EF 2px solid;
+        border-right: #F0F4EF 2px solid;
+        transition: linear 300ms;
+    }
+    
+    .scrollUp:hover::before {
+        left: 0;
+        top: 0;
+        transition: linear 300ms;
+        opacity: 0.2;
+    }
+    
+    .scrollUp:hover::after {
+        right: 0;
+        bottom: 0;
+        transition: linear 300ms;
+        opacity: 0.2;
+    }
+    
+    
+    .contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 60px;
+        background-color: #F0F4EF;
+        color: #272d2d;
+        padding: 10px;
+        align-items: center;
+    }
+    
+    .contact .sectionOne {
+        text-align: center;
+        flex: 2;
+    }
+    
+    .contact .sectionTwo {
+        flex: 4;
+    }
+    
+    .sectionTwo form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sectionTwo form input, textarea {
+        padding: 10px;
+        background-color: #272d2d;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        color: #F0F4EF;
+        font-size: 1rem;
+    }
+    
+    .sectionTwo .send:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
     
   }
 
+.aboutMe {
+    font-size: 1rem;
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+    box-sizing: border-box; 
+    color: #3fc1b8;
+    background-image: conic-gradient(from 45deg, #3fc1b8 19%, #8eb5cf 19%, #e88fdc 56%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
 
+.aboutMe ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+}
+
+.aboutMe ion-icon {
+    font-size: 3rem;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+/* Scroll to top button */
+
+.scrollUp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 24px;
+    padding: 5px 15px 0px 15px;
+    color: #272d2d;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    border-radius: 1px;
+    background-color: #F0F4EF;
+    outline: none;
+    z-index: 1000;
+}
+
+.scrollUp::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: -20%;
+    top: -20%;
+    border-top: #F0F4EF 2px solid;
+    border-left: #F0F4EF 2px solid;
+    transition: linear 300ms;
+}
+
+.scrollUp::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    right: -20%;
+    bottom: -20%;
+    border-bottom: #F0F4EF 2px solid;
+    border-right: #F0F4EF 2px solid;
+    transition: linear 300ms;
+}
+
+.scrollUp:hover::before {
+    left: 0;
+    top: 0;
+    transition: linear 300ms;
+    opacity: 0.2;
+}
+
+.scrollUp:hover::after {
+    right: 0;
+    bottom: 0;
+    transition: linear 300ms;
+    opacity: 0.2;
+}
+
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 60px;
+    background-color: #F0F4EF;
+    color: #272d2d;
+    padding: 10px;
+    align-items: center;
+}
+
+.contact .sectionOne {
+    text-align: center;
+    flex: 2;
+}
+
+.contact .sectionTwo {
+    flex: 4;
+}
+
+.sectionTwo form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTwo form input, textarea {
+    padding: 10px;
+    background-color: #272d2d;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #F0F4EF;
+    font-size: 1rem;
+}
+
+.sectionTwo .send:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #272d2d;
+    padding: 20px;
+    text-align: center;
+    color: #F0F4EF;
+}
+
+footer a {
+    color: #3fc1b8;
+    text-decoration: none;
+}
 
   

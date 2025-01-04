@@ -211,7 +211,6 @@ nav .menu {
    .whatsHere {
     font-size: 1rem;
     text-align: center;
-    margin: 50px 10px;
     padding: 20px;
     background-color: #272d2d;
     color: #F0F4EF;
@@ -405,14 +404,266 @@ nav .menu {
       .whatsHere {
         font-size: 0.8rem;
         text-align: center;
-        margin: 30px 5px;
         padding: 10px;
         background-color: #272d2d;
         color: #F0F4EF;
         line-height: 15px;
         box-sizing: border-box;
       }
+
+      .aboutMe {
+        font-size: 1rem;
+        position: relative;
+        text-align: center;
+        margin-top: 40px;
+        box-sizing: border-box; 
+        color: #750dac; 
+        background-image: conic-gradient(from 45deg, #750dac 23%, #8a36af 31%, #554ee2 15%); 
+        background-clip: text; 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+    }
+    
+    .aboutMe ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        line-height: 20px;
+    }
+    
+    .aboutMe ion-icon {
+        font-size: 3rem;
+        margin-right: 10px;
+        padding: 5px;
+    }
+    
+      /* Scroll to top */
+    
+    
+    .scrollUp {
+        position: fixed;
+        background-color: #272d2d;
+        bottom: 30px;
+        right: 30px;
+        font-size: 24px;
+        padding: 5px 15px 0px 15px;
+        color: #F0F4EF;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        border-radius: 1px;
+    }
+    
+    .scrollUp::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        left: -20%;
+        top: -20%;
+        border-top: #272d2d 2px solid;
+        border-left: #272d2d 2px solid;
+        transition: linear 300ms;
+    }
+    
+    .scrollUp::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        right: -20%;
+        bottom: -20%;
+        border-bottom: #272d2d 2px solid;
+        border-right: #272d2d 2px solid;
+        transition: linear 300ms;
+    }
+    
+    .scrollUp:hover::before {
+        left: 0;
+        top: 0;
+        transition: linear 300ms;
+        opacity: 0.2;
+    }
+    
+    .scrollUp:hover::after {
+        right: 0;
+        bottom: 0;
+        transition: linear 300ms;
+        opacity: 0.2;
+    }
+    
+    .contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 60px;
+        background-color: #272d2d;
+        color: #F0F4EF;
+        padding: 10px;
+        align-items: center;
+    }
+    
+    .contact .sectionOne {
+        text-align: center;
+        flex: 2;
+    }
+    
+    .contact .sectionTwo {
+        flex: 4;
+    }
+    
+    .sectionTwo form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sectionTwo form input, textarea {
+        padding: 10px;
+        background-color: #F0F4EF;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        color: #272d2d;
+        font-size: 1rem;
+    }
+    
+    .sectionTwo .send:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
     
   }
 
-  
+
+.aboutMe {
+    font-size: 1rem;
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+    box-sizing: border-box; 
+    color: #750dac; 
+    background-image: conic-gradient(from 45deg, #750dac 23%, #8a36af 31%, #554ee2 15%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.aboutMe ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+}
+
+.aboutMe ion-icon {
+    font-size: 3rem;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+  /* Scroll to top */
+
+
+.scrollUp {
+    position: fixed;
+    background-color: #272d2d;
+    bottom: 30px;
+    right: 30px;
+    font-size: 24px;
+    padding: 5px 15px 0px 15px;
+    color: #F0F4EF;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    border-radius: 1px;
+}
+
+.scrollUp::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: -20%;
+    top: -20%;
+    border-top: #272d2d 2px solid;
+    border-left: #272d2d 2px solid;
+    transition: linear 300ms;
+}
+
+.scrollUp::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    right: -20%;
+    bottom: -20%;
+    border-bottom: #272d2d 2px solid;
+    border-right: #272d2d 2px solid;
+    transition: linear 300ms;
+}
+
+.scrollUp:hover::before {
+    left: 0;
+    top: 0;
+    transition: linear 300ms;
+    opacity: 0.2;
+}
+
+.scrollUp:hover::after {
+    right: 0;
+    bottom: 0;
+    transition: linear 300ms;
+    opacity: 0.2;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 60px;
+    background-color: #272d2d;
+    color: #F0F4EF;
+    padding: 10px;
+    align-items: center;
+}
+
+.contact .sectionOne {
+    text-align: center;
+    flex: 2;
+}
+
+.contact .sectionTwo {
+    flex: 4;
+}
+
+.sectionTwo form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTwo form input, textarea {
+    padding: 10px;
+    background-color: #F0F4EF;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #272d2d;
+    font-size: 1rem;
+}
+
+.sectionTwo .send:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #F0F4EF;
+    padding: 20px;
+    text-align: center;
+    color: #272d2d;
+}
+
+footer a {
+    color: #750dac;
+    text-decoration: none;
+}
