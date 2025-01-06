@@ -9,7 +9,7 @@ function toggleMenu(show) {
         document.body.style.overflow = show ? 'hidden' : 'auto';
         
         if (show) {
-            closeButton.focus();
+            // closeButton.focus();
         } else {
             menu.focus();
         }

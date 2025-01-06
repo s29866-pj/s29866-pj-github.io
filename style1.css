@@ -1,12 +1,18 @@
 /* Dark theme */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+:root{
+    --main-color: #F0F4EF;
+    --secondary-color: #272d2d;
+    --fancy-color: #6cf683;
+}
+
 body {
-    background-color: #272d2d;
+    background-color: var(--secondary-color);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #F0F4EF;
+    color: var(--main-color);
     display: block;
     font-family: "Ubuntu", serif;
 }
@@ -26,15 +32,15 @@ body {
     top: 10px;
     right: 10px;
     font-size: 2rem;
-    color: #F0F4EF;
+    color: var(--main-color);
     cursor: pointer;
-    background: #272d2d;
+    background: var(--secondary-color);
     border: none;
 }
 
 .X {
     font-size: 2rem;
-    color: #F0F4EF;
+    color: var(--main-color);
     cursor: pointer;
 }
 
@@ -43,11 +49,11 @@ body {
     margin: 0;
     padding: 0;
     font-size: 2rem;
-    color: #F0F4EF;
+    color: var(--main-color);
 }
 
 .huge li a {
-    color: #F0F4EF;
+    color: var(--main-color);
     text-decoration: none;
 }
 
@@ -65,7 +71,7 @@ nav {
 }
 
 nav .menu {
-    color: #F0F4EF;
+    color: var(--main-color);
     text-decoration: none;
 }
 
@@ -73,7 +79,7 @@ nav .menu {
     display: flex;
     position: relative;
     gap: 10px;
-    border: solid 1px #F0F4EF;
+    border: solid 1px var(--main-color);
     border-radius: 1rem;
     overflow: hidden;
     box-sizing: border-box;
@@ -84,7 +90,7 @@ nav .menu {
 
 .mainMenu:hover {
     cursor: pointer;
-    box-shadow: #F0F4EF 1px 2px 5px;
+    box-shadow: var(--main-color) 1px 2px 5px;
     z-index: 10;
     transition: ease-out 200ms;
 }
@@ -101,7 +107,7 @@ nav .menu {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #F0F4EF;
+    background-color: var(--main-color);
     z-index: 0;
     left: -100%;
     transition: linear 200ms;
@@ -112,24 +118,24 @@ nav .menu {
 }
 
 .mainMenu:hover .menu {
-    color: #272d2d;
+    color: var(--secondary-color);
     z-index: 1;
 }
 
 .timer{
-    color: #F0F4EF;
+    color: var(--main-color);
     font-size: 1rem;
-    text-shadow: 0px 2px 2px #F0F4EF;
+    text-shadow: 0px 2px 2px var(--main-color);
     position: relative;
     transition: transform .4s ease;
 }
 
 .lightDark {
     position: relative;
-    background-color: #272d2d;
+    background-color: var(--secondary-color);
     display: flex;
     gap: 20px;
-    border: solid 1px #F0F4EF;
+    border: solid 1px var(--main-color);
     border-radius: 1rem;
     width: 100px;
     height: 50px;
@@ -145,7 +151,7 @@ nav .menu {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #F0F4EF;
+    background-color: var(--main-color);
     z-index: 0;
     left: -100%;
     transition: linear 200ms;
@@ -157,7 +163,7 @@ nav .menu {
 
 .lightDark:hover {
     cursor: pointer;
-    box-shadow: #F0F4EF 1px 2px 5px;
+    box-shadow: var(--main-color) 1px 2px 5px;
     z-index: 10;
     transition: ease-out 200ms;
 }
@@ -165,11 +171,11 @@ nav .menu {
 .lightDark .switch {
     width: 20px;
     height: 20px;
-    color: #F0F4EF;
+    color: var(--main-color);
 }
 
 .lightDark:hover .switch {
-    color: #272d2d;
+    color: var(--secondary-color);
 }
 
 
@@ -184,7 +190,7 @@ nav .menu {
 
 .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #F0F4EF; /* The typwriter cursor */
+    border-right: .15em solid var(--main-color); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
@@ -202,9 +208,8 @@ nav .menu {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #F0F4EF; }
+    50% { border-color: var(--main-color); }
   }
-
 
 
     /* About this project */
@@ -212,8 +217,8 @@ nav .menu {
     font-size: 1rem;
     text-align: center;
     padding: 20px;
-    background-color: #F0F4EF;
-    color: #272d2d;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
     line-height: 30px;
     box-sizing: border-box;
   }
@@ -228,216 +233,7 @@ nav .menu {
     margin-bottom: 10px;
   }
 
-
-
-
-  /* Responsive design */
-  @media  (max-width: 768px) {
-
-    .huge {
-        line-height: 25px;
-    }
-
-    .huge li {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        font-size: 1rem;
-        color: #F0F4EF;
-    }
-
-    /* Navigation Bar */
-    nav {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 20px;
-        align-items: center;
-    }
-
-    nav .menu {
-        color: #F0F4EF;
-        text-decoration: none;
-    }
-
-    .mainMenu {
-        display: flex;
-        position: relative;
-        gap: 10px;
-        border: solid 1px #F0F4EF;
-        border-radius: 1rem;
-        overflow: hidden;
-        box-sizing: border-box;
-        padding: 10px 10px;
-        transition: ease-out 200ms;
-        margin-right: 10px;
-    }
-
-    .mainMenu:hover {
-        cursor: pointer;
-        box-shadow: #F0F4EF 1px 2px 5px;
-        z-index: 10;
-        transition: ease-out 200ms;
-    }
-
-    .mainMenu .menu{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .mainMenu p {
-        display: none;
-    }
-
-    .mainMenu::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #F0F4EF;
-        z-index: 0;
-        left: -100%;
-        top: 0;
-        transition: linear 200ms;
-    }
-
-    .mainMenu:hover::before {
-        left: 0;
-    }
-
-    .mainMenu:hover a {
-        color: #F0F4EF;
-        z-index: 1;
-    }
-
-
-    .timer{
-        color: #F0F4EF;
-        font-size: 0.7rem;
-        text-shadow: 0px 1px 1px #F0F4EF;
-        position: relative;
-        transition: transform .4s ease;
-    }
-
-    .lightDark {
-        position: relative;
-        background-color: #272d2d;
-        display: flex;
-        gap: 20px;
-        border: solid 1px #F0F4EF;
-        border-radius: 1rem;
-        width: 50px;
-        height: 40px;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        transition: ease-out 200ms;
-        margin-right: auto;
-    }
-
-    .lightDark::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #F0F4EF;
-        z-index: 0;
-        left: -100%;
-        transition: linear 200ms;
-    }
-
-    .lightDark:hover::before {
-        left: 0;
-    }
-
-    .lightDark:hover {
-        cursor: pointer;
-        box-shadow: #F0F4EF 1px 2px 5px;
-        z-index: 10;
-        transition: ease-out 200ms;
-    }
-
-    .lightDark .switch {
-        width: 20px;
-        height: 20px;
-        color: #F0F4EF;
-    }
-
-    .lightDark:hover .switch {
-        color: #272d2d;
-    }
-
-
-    .mainContent {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: 20px;
-    }
-
-    
-    .typewriter h1 {
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid #F0F4EF; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        font-size: 14px;
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .15em; /* Adjust as needed */
-        animation: 
-          typing 3.5s steps(40, end),
-          blink-caret .75s step-end infinite;
-      }
-      
-      /* The typing effect */
-      @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-      }
-      
-      /* The typewriter cursor effect */
-      @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: #F0F4EF; }
-      }
-
-
-      .whatsHere {
-        font-size: 0.8rem;
-        text-align: center;
-        padding: 10px;
-        background-color: #F0F4EF;
-        color: #272d2d;
-        line-height: 15px;
-        box-sizing: border-box;
-      }
-
-      .aboutMe {
-        font-size: 10px;
-        position: relative;
-        text-align: center;
-        margin-top: 40px;
-        box-sizing: border-box; 
-        color: #3fc1b8;
-        background-image: conic-gradient(from 45deg, #3fc1b8 19%, #8eb5cf 19%, #e88fdc 56%); 
-        background-clip: text; 
-        -webkit-background-clip: text; 
-        -webkit-text-fill-color: transparent; 
-    }
-    
-    .aboutMe ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        line-height: 20px;
-    }
-    
-    .aboutMe ion-icon {
-        font-size: 1rem;
-        margin-right: 10px;
-        padding: 5px;
-    }
-    
+  
     /* Scroll to top button */
     
     .scrollUp {
@@ -446,12 +242,12 @@ nav .menu {
         right: 30px;
         font-size: 1px;
         padding: 5px 15px 0px 15px;
-        color: #272d2d;
+        color: var(--secondary-color);
         cursor: pointer;
         transition: opacity 0.3s ease;
         opacity: 1;
         border-radius: 1px;
-        background-color: #F0F4EF;
+        background-color: var(--main-color);
         outline: none;
         z-index: 1000;
     }
@@ -463,8 +259,8 @@ nav .menu {
         height: 50%;
         left: -20%;
         top: -20%;
-        border-top: #F0F4EF 2px solid;
-        border-left: #F0F4EF 2px solid;
+        border-top: var(--pseudo-color) 2px solid;
+        border-left: var(--pseudo-color) 2px solid;
         transition: linear 300ms;
     }
     
@@ -475,8 +271,8 @@ nav .menu {
         height: 50%;
         right: -20%;
         bottom: -20%;
-        border-bottom: #F0F4EF 2px solid;
-        border-right: #F0F4EF 2px solid;
+        border-bottom: var(--pseudo-color) 2px solid;
+        border-right: var(--pseudo-color) 2px solid;
         transition: linear 300ms;
     }
     
@@ -500,8 +296,8 @@ nav .menu {
         flex-wrap: wrap;
         justify-content: space-around;
         margin-top: 60px;
-        background-color: #F0F4EF;
-        color: #272d2d;
+        background-color: var(--main-color);
+        color: var(--secondary-color);
         padding: 10px;
         align-items: center;
     }
@@ -522,11 +318,11 @@ nav .menu {
     
     .sectionTwo form input, textarea {
         padding: 10px;
-        background-color: #272d2d;
+        background-color: var(--secondary-color);
         border: none;
         border-radius: 5px;
         outline: none;
-        color: #F0F4EF;
+        color: var(--main-color);
         font-size: 1rem;
     }
     
@@ -534,8 +330,7 @@ nav .menu {
         opacity: 0.9;
         cursor: pointer;
     }
-    
-  }
+
 
 .aboutMe {
     font-size: 1rem;
@@ -543,8 +338,8 @@ nav .menu {
     text-align: center;
     margin-top: 40px;
     box-sizing: border-box; 
-    color: #3fc1b8;
-    background-image: conic-gradient(from 45deg, #3fc1b8 19%, #8eb5cf 19%, #e88fdc 56%); 
+    background: rgb(0,246,229);
+    background: linear-gradient(144deg, rgba(0,246,229,1) 0%, rgba(0,103,18,1) 100%); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
@@ -561,6 +356,7 @@ nav .menu {
     font-size: 3rem;
     margin-right: 10px;
     padding: 5px;
+    color: var(--fancy-color);
 }
 
 /* Scroll to top button */
@@ -571,12 +367,12 @@ nav .menu {
     right: 30px;
     font-size: 24px;
     padding: 5px 15px 0px 15px;
-    color: #272d2d;
+    color: var(--secondary-color);
     cursor: pointer;
     transition: opacity 0.3s ease;
     opacity: 1;
     border-radius: 1px;
-    background-color: #F0F4EF;
+    background-color: var(--main-color);
     outline: none;
     z-index: 1000;
 }
@@ -588,8 +384,8 @@ nav .menu {
     height: 50%;
     left: -20%;
     top: -20%;
-    border-top: #F0F4EF 2px solid;
-    border-left: #F0F4EF 2px solid;
+    border-top: var(--fancy-color) 2px solid;
+    border-left: var(--fancy-color) 2px solid;
     transition: linear 300ms;
 }
 
@@ -600,8 +396,8 @@ nav .menu {
     height: 50%;
     right: -20%;
     bottom: -20%;
-    border-bottom: #F0F4EF 2px solid;
-    border-right: #F0F4EF 2px solid;
+    border-bottom: var(--fancy-color) 2px solid;
+    border-right: var(--fancy-color) 2px solid;
     transition: linear 300ms;
 }
 
@@ -619,15 +415,14 @@ nav .menu {
     opacity: 0.2;
 }
 
-
 .contact {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 60px;
-    background-color: #F0F4EF;
-    color: #272d2d;
-    padding: 10px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 20px;
     align-items: center;
 }
 
@@ -647,11 +442,11 @@ nav .menu {
 
 .sectionTwo form input, textarea {
     padding: 10px;
-    background-color: #272d2d;
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 5px;
     outline: none;
-    color: #F0F4EF;
+    color: var(--main-color);
     font-size: 1rem;
 }
 
@@ -662,15 +457,268 @@ nav .menu {
 
 
 footer {
-    background-color: #272d2d;
+    background-color: var(--secondary-color);
     padding: 20px;
     text-align: center;
-    color: #F0F4EF;
+    color: var(--main-color);
 }
 
 footer a {
-    color: #3fc1b8;
+    color: var(--fancy-color);
     text-decoration: none;
+}
+
+
+@media  (max-width: 768px) {
+
+    .huge {
+        line-height: 25px;
+    }
+
+    .huge li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        color: var(--main-color);
+    }
+
+    /* Navigation Bar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+    }
+
+    nav .menu {
+        color: var(--main-color);
+        text-decoration: none;
+    }
+
+    .mainMenu {
+        display: flex;
+        position: relative;
+        gap: 10px;
+        border: solid 1px var(--main-color);
+        border-radius: 1rem;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 10px 10px;
+        transition: ease-out 200ms;
+        margin-right: 10px;
+    }
+
+    .mainMenu:hover {
+        cursor: pointer;
+        box-shadow: var(--main-color) 1px 2px 5px;
+        z-index: 10;
+        transition: ease-out 200ms;
+    }
+
+    .mainMenu .menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mainMenu p {
+        display: none;
+    }
+
+    .mainMenu::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-color);
+        z-index: 0;
+        left: -100%;
+        top: 0;
+        transition: linear 200ms;
+    }
+
+    .mainMenu:hover::before {
+        left: 0;
+    }
+
+    .mainMenu:hover a {
+        color: var(--main-color);
+        z-index: 1;
+    }
+
+
+    .timer{
+        color: var(--main-color);
+        font-size: 0.7rem;
+        text-shadow: 0px 1px 1px var(--main-color);
+        position: relative;
+        transition: transform .4s ease;
+    }
+
+    .lightDark {
+        position: relative;
+        background-color: var(--secondary-color);
+        display: flex;
+        gap: 20px;
+        border: solid 1px var(--main-color);
+        border-radius: 1rem;
+        width: 50px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: ease-out 200ms;
+        margin-right: auto;
+    }
+
+    .lightDark::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-color);
+        z-index: 0;
+        left: -100%;
+        transition: linear 200ms;
+    }
+
+    .lightDark:hover::before {
+        left: 0;
+    }
+
+    .lightDark:hover {
+        cursor: pointer;
+        box-shadow: var(--main-color) 1px 2px 5px;
+        z-index: 10;
+        transition: ease-out 200ms;
+    }
+
+    .lightDark .switch {
+        width: 20px;
+        height: 20px;
+        color: var(--main-color);
+    }
+
+    .lightDark:hover .switch {
+        color: var(--secondary-color);
+    }
+
+
+    .mainContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 20px;
+    }
+
+    
+    .typewriter h1 {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid var(--main-color); /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        font-size: 14px;
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: var(--main-color); }
+      }
+
+
+      .whatsHere {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 10px;
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        line-height: 15px;
+        box-sizing: border-box;
+      }
+
+        .aboutMe {
+        font-size: 12px;
+        position: relative;
+        text-align: center;
+        margin-top: 40px;
+        box-sizing: border-box; 
+        background: rgb(0,246,229);
+        background: linear-gradient(144deg, rgba(0,246,229,1) 0%, rgba(0,103,18,1) 100%); 
+        background-clip: text; 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        }
+
+        .aboutMe ion-icon {
+            font-size: 2rem;
+            margin-right: 10px;
+            padding: 5px;
+            color: var(--fancy-color);
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+            background-color: var(--main-color);
+            color: var(--secondary-color);
+            padding: 10px;
+            align-items: center;
+            font-size: 15px;
+        }
+        
+        .contact .sectionOne {
+            text-align: center;
+            flex: 2;
+            font-size: 10px;
+        }
+        
+        .contact .sectionTwo {
+            flex: 4;
+        }
+        
+        .sectionTwo form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sectionTwo form input, textarea {
+            padding: 10px;
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            color: var(--main-color);
+            font-size: .7rem;
+        }
+        
+        .sectionTwo .send:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            text-align: center;
+            color: var(--main-color);
+            font-size: 10px;
+        }
+        
 }
 
   
